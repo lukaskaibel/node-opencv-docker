@@ -11,6 +11,8 @@ RUN apt-get update  --fix-missing && apt-get install -y \
     libavformat-dev \
     libswscale-dev 
 
+COPY opencv/ opencv/
+
 # Build OpenCV from source
 RUN cd opencv && \
     mkdir release && \
